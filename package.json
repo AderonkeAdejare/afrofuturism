@@ -3,9 +3,9 @@
     "aos": "^3.0.0-beta.6"
   }, 
   
-  "main": "server.js",
+  "main": "application.py",
   "scripts": {
-    "start": "node server.js",
+    "start": "python application.py",
     "test": "mocha",
     "postinstall": "bower install && grunt build"
   }
