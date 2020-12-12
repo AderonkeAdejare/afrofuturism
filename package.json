@@ -3,7 +3,7 @@
     "aos": "^3.0.0-beta.6"
   }, 
   
-//  "main": "application.py",
+ "main": "application.py",
   "scripts": {
     "start": "python application.py",
     "test": "mocha",
