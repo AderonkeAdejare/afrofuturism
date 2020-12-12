@@ -38,7 +38,7 @@ def apology(message, code=400):
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def index():
     """Main Page; make cool unlocking thing"""
     return render_template("index.html")
@@ -280,13 +280,13 @@ def result():
 
     return render_template("result.html", result=result)
 
-@app.route("/diaspora")
+@app.route("/diaspora", methods=["GET"])
 def diaspora():
     """African Diaspora in Africanfuturism"""
     return render_template("diaspora.html")
 
 
-@app.route("/about")
+@app.route("/about", methods=["GET"])
 def about():
     """About Me/Classes"""
     return render_template("about.html")
