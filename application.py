@@ -10,6 +10,11 @@ from werkzeug.exceptions import default_exceptions, HTTPException, InternalServe
 # Configure application
 app = Flask(__name__)
 
+# Ensures app can be run through Heroku
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SECRET_KEY"] = "2)Wkrv%b`BG&4P."
