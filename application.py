@@ -8,7 +8,7 @@ from werkzeug.exceptions import default_exceptions, HTTPException, InternalServe
 
 
 # Configure application
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Ensures app can be run through Heroku
 if __name__ == "__main__":
